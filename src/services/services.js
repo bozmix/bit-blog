@@ -1,7 +1,16 @@
-const url = 'https://jsonplaceholder.typicode.com';
+const endPoint = 'https://jsonplaceholder.typicode.com/posts';
 
 const getData = () => {
-    return fetch(url)
-            .then(response => response.json())
-            .then(myResponse => console.log(myResponse))
+    return fetch(endPoint)
+            .then(response => {
+                console.log(response)
+                return response.json()
+
+            })
+            .then(myResponse => {
+                console.log(myResponse)
+                return myResponse
+            })
 }
+
+export default getData
