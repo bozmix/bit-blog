@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import getData from '../../services/services';
+import {getData} from '../../services/services';
 import {Blog} from '../Blog/Blog';
 
 import './Home.css';

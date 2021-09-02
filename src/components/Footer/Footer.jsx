@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './Footer.css';
 
+import './Footer.css';
 export const Footer = () => {
-    return (
-        <div className='footer'>
-            <p>Copyright &copy; BIT 2021</p>
-        </div>
-    )
+  return (
+    <footer className="footer mt-auto py-3 bg-light fixed-bottom">
+      <h3 className="text-reset fw-bold text-center" >©️Copyright 2021 Bit Student</h3>
+    </footer>
+  )
 }
