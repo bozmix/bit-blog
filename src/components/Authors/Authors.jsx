@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import {getData} from '../../services/services';
+import {getAuthors} from '../../services/services';
+import { Author } from '../Author/Author';
 
 import './Authors.css'
 
@@ -8,13 +9,15 @@ export const Authors = () => {
     let [authors, setAuthors] = useState([]);
 
     useEffect(() => {
-        getData()
-            .then(response => console.log('from authors page',response))
+        getAuthors()
+            .then(response => setAuthors(response))
     }, [])
-
     return (
         <div>
-            <h5>AUTHORS </h5>
+            <h5>AUTHORS ({authors.length})</h5>
+            <div>
+                {authors.map((author, index) => <Author author={author} key={index} />)}
+            </div>
         </div>
     )
 }
