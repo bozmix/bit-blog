@@ -52,3 +52,11 @@ export const authorPosts = (authorId) => {
         return result
     });
 };
+
+export const getAuthors = () => {
+  return fetch(authorEndPoint)
+    .then(response => response.json())
+    .then(authors => {
+      return authors
+    });
+}
